@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Layout from './Layout';
 import './index.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+//global variable for compat
+window.ReactDOM = ReactDOM;
+window.React = React;
+
+ReactDOM.render(<Layout />,document.getElementById('root'));
