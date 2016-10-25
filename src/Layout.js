@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import './Layout.css';
 import GoldenLayout from 'golden-layout';
 
-require('golden-layout/src/css/goldenlayout-base.css');
-require('golden-layout/src/css/goldenlayout-dark-theme.css');
+import 'golden-layout/src/css/goldenlayout-base.css';
+import 'golden-layout/src/css/goldenlayout-dark-theme.css';
 
 import ItemList from './ItemList';
+import Chart from './Chart';
 
 class Layout extends Component {
 
@@ -23,7 +24,7 @@ class Layout extends Component {
                 type: 'column',
                 content:[{
                     type:'react-component',
-                    component: 'ItemList',
+                    component: 'Chart',
                     props: { label: 'B' }
                 },{
                     type:'react-component',
@@ -34,6 +35,7 @@ class Layout extends Component {
         }]
     });
     myLayout.registerComponent( 'ItemList', ItemList);
+    myLayout.registerComponent( 'Chart', Chart);
     myLayout.init();
   };
   render(){
