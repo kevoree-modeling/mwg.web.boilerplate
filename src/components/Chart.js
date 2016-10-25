@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import Plotly from 'plotly.js';
+import Plotly from 'plotly.js/dist/plotly-basic.js';
 
 class Chart extends Component {
 

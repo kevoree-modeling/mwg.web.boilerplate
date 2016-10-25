@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './Layout';
+import Layout from './components/Layout';
 import './index.css';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+
+import reducers from './reducers'
 
 //global variable for compat
 window.ReactDOM = ReactDOM;
 window.React = React;
 
-ReactDOM.render(<Layout />,document.getElementById('root'));
+let store = createStore(reducers);
+
+ReactDOM.render(
+  <Provider store={store}>
+  <Layout />
+  </Provider>,
+  document.getElementById('root')
+);
