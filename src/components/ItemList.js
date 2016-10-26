@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-
-const divStyle = {color: 'orange'};
+import { Button } from 're-bulma';
 
 class ItemList extends Component {
 
   render() {
-      return (<span style={divStyle}>{this.props.label}</span>)
+      return (
+        <div>
+        <Button color="isPrimary">Primary</Button>
+        <Button color="isPrimary">Primary</Button>
+        <Button color="isPrimary">Primary</Button>
+        </div>
+      )
   }
 }
 
